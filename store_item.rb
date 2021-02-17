@@ -44,15 +44,20 @@ end
 
 #create new item using Hat class, prints hat info and specifically the hat type
 store_item1 = Hat.new({
-  :type => "snapback", 
-  :color => "red", 
-  :cost => 30, 
-  :size => "large"
+  type: "snapback", 
+  color: "red", 
+  cost: 30, 
+  size: "large"
   })
 store_item1.print_info
 puts store_item1.type
 #creates new item using Hat class, print info and then cost
-store_item2 = Hat.new("beanie", "blue", 25, "small" )
+store_item2 = Hat.new({
+  type: "beanie", 
+  color: "blue", 
+  cost: 25, 
+  size: "small"
+  })
 store_item2.print_info
 puts store_item2.cost
 #increases store item 2 using the inflation method, prints cost prints size
