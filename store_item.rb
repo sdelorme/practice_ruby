@@ -17,15 +17,15 @@ class Hat
   end
 
   def print_info
-    puts "This is a #{@type} hat. It is #{@color} and costs $#{@cost}"
+    puts "This is a #{@type} hat. It is #{@color} and costs $#{@cost}."
   end
 
   def type
-  @type
+    @type
   end
 
   def color
-  @color
+    @color
   end
 
   def cost
@@ -36,4 +36,6 @@ class Hat
 end
 
 store_item = Hat.new("snapback", "red", 30)
+store_item.print_info
+puts store_item.type
 
