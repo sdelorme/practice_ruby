@@ -20,6 +20,10 @@ class Hat
     puts "This is a #{@type} hat. It is #{@color} and costs $#{@cost}."
   end
 
+  def inflation
+    @cost *= 1.02
+  end
+
   def type
     @type
   end
@@ -35,7 +39,15 @@ class Hat
 
 end
 
-store_item = Hat.new("snapback", "red", 30)
-store_item.print_info
-puts store_item.type
+store_item1 = Hat.new("snapback", "red", 30)
+store_item1.print_info
+puts store_item1.type
+
+store_item2 = Hat.new("beanie", "blue", 25)
+store_item2.print_info
+puts store_item2.cost
+store_item2.inflation
+puts store_item2.cost
+
+
 
