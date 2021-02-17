@@ -10,7 +10,6 @@
 
 class Hat
 
-  attr_reader :size
   attr_accessor :size
 
   def initialize(type, color, cost, size)
@@ -43,16 +42,19 @@ class Hat
 
 end
 
+#create new item using Hat class, prints hat info and specifically the hat type
 store_item1 = Hat.new("snapback", "red", 30, "large")
 store_item1.print_info
 puts store_item1.type
-
+#creates new item using Hat class, print info and then cost
 store_item2 = Hat.new("beanie", "blue", 25, "small" )
 store_item2.print_info
 puts store_item2.cost
+#increases store item 2 using the inflation method, prints cost prints size
 store_item2.inflation
 puts store_item2.cost
 puts store_item2.size
+##changes size of item 2 to medium and prints new size
 store_item2.size = "medium"
 puts store_item2.size
 
