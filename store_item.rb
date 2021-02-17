@@ -10,13 +10,13 @@
 
 class Hat
 
-  attr_accessor :size
+  attr_accessor :size, :type, :color, :type
 
-  def initialize(type, color, cost, size)
-    @type = type
-    @color = color
-    @cost = cost
-    @size = size
+  def initialize(input_options)
+    @type = input_options[:type]
+    @color = input_options[:color]
+    @cost = input_options[:cost]
+    @size = input_options[:size]
   end
 
   def print_info
@@ -43,7 +43,12 @@ class Hat
 end
 
 #create new item using Hat class, prints hat info and specifically the hat type
-store_item1 = Hat.new("snapback", "red", 30, "large")
+store_item1 = Hat.new({
+  :type => "snapback", 
+  :color => "red", 
+  :cost => 30, 
+  :size => "large"
+  })
 store_item1.print_info
 puts store_item1.type
 #creates new item using Hat class, print info and then cost
