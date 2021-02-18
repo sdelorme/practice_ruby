@@ -20,7 +20,7 @@ class Wheels
 end
 
 
-class Car
+class Car < Wheels
 
   def honk_horn
     puts "Beeeeeeep!"
@@ -28,10 +28,18 @@ class Car
 
 end
 
-class Bike
+class Bike < Wheels
 
   def ring_bell
     puts "Ring ring!"
   end
-  
+
 end
+
+
+new_car = Car.new
+new_bike = Bike.new
+puts new_car.accelerate
+puts new_bike.accelerate
+new_car.honk_horn
+new_bike.ring_bell
