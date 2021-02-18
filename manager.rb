@@ -24,6 +24,8 @@ employee1.print_info
 employee2.print_info
 
 class Manager < Employee
+  attr_accessor :employees
+
   def initialize(input_options)
     super
     @employees = input_options[:employees]
@@ -35,13 +37,19 @@ class Manager < Employee
     puts "Email sent!"
   end
 
-  def employees
-    @employees
-  end
-
   def give_all_raises
     employees.each do |employees|
       employees.give_annual_raise
+    end
+  end
+#this currently sucks and does not work
+  def status_update
+    @active = false
+  end
+
+  def fire_all_employees
+    employees.each do |employees|
+      employees.status_update
     end
   end
 end
@@ -52,5 +60,9 @@ manager.send_report
 manager.give_all_raises
 employee1.print_info
 employee2.print_info
+puts employee2.active
+manager.fire_all_employees
+puts employee2.active
 
+# 3. Create a method in the Manager class called fire_all_employees that loops through each of the manager’s employees and changes their active status to false.
 
