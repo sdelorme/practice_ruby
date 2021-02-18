@@ -1,8 +1,3 @@
-# hat1 = {"Type" => "snapback", "Color" => "red", "Cost" => 30}
-# hat2 = {:Type => "winter", :Color => "blue", :Cost => 20}
-# hat3 = {"Type" => "tophat", "Color" => "black", "Cost" => 50}
-
-
 
 # Rewrite your store items using a class instead of a hash.
 #a) Choose which attributes should have “reader” methods and which attributes should have “writer” methods.
@@ -39,7 +34,6 @@ class Hat
     @cost
   end
 
-
 end
 
 #create new item using Hat class, prints hat info and specifically the hat type
@@ -52,12 +46,14 @@ store_item1 = Hat.new({
 store_item1.print_info
 puts store_item1.type
 #creates new item using Hat class, print info and then cost
+
 store_item2 = Hat.new({
   type: "beanie", 
   color: "blue", 
   cost: 25, 
   size: "small"
   })
+
 store_item2.print_info
 puts store_item2.cost
 #increases store item 2 using the inflation method, prints cost prints size
