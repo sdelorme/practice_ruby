@@ -62,7 +62,7 @@ puts store_item2.cost
 puts store_item2.size
 ##changes size of item 2 to medium and prints new size
 store_item2.size = "medium"
-puts store_item2.size
+
 
 
 
